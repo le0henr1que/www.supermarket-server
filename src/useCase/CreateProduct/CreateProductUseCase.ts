@@ -14,7 +14,7 @@ export class CreateProductUseCase{
 
         // console.log(poductNameAlredyExists[0].name)
 
-        if(poductNameAlredyExists[0].name){
+        if(poductNameAlredyExists[0]?.name){
             throw new Error('Produto já existe na sua lista')
         }
         const product = new Product(data);
