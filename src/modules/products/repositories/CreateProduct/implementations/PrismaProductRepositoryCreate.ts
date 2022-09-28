@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 
-import { Product } from "../../entities/Product";
-import { IProductRepository } from "../IProductRepository";
+import { Product } from "../../../entities/Product";
+import { IProductRepository } from "../IProductRepositoryCreate";
 
 const prisma = new PrismaClient()
 
