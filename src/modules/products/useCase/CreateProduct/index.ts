@@ -5,7 +5,7 @@ import { CreateProductController } from "./CreateProductController";
 import { CreateProductUseCase } from "./CreateProductUseCase";
 
 const PrismaProductRepository = new Prisma.PrismaProductRepository()
-
+//create merge
 const productUseCase = new CreateProductUseCase(
     PrismaProductRepository
 )
