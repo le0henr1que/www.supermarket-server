@@ -10,14 +10,14 @@ const prisma = new PrismaClient()
 
 
 
-app.get('/product', async (request, response) =>{
+app.get('/product', async (request, response) => {
     const product = await prisma.product.findMany()
 
     response.status(200).json(product)
 })
 
 app.post('/product', async (request, response) => {
-    const {name, count, price} = request.body;
+    const {name, count, price} = request.body
 
     try{
         const product = await prisma.product.create({
