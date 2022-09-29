@@ -1,5 +1,6 @@
 import { Product } from "../../entities/Product";
-import { IProductRepository } from "../../repositories/IProductRepositoryCreate";
+// import { IProductRepository } from "../../repositories/IProductRepositoryCreate";
+import { IProductRepository } from "../../repositories/CreateProduct/IProductRepositoryCreate";
 import { ICreateProductDTO } from "./CreateProductDTO";
 
 export class CreateProductUseCase{
@@ -9,10 +10,7 @@ export class CreateProductUseCase{
     ){}
 
     async execute(data: ICreateProductDTO){
-        console.log(data)
         const poductNameAlredyExists = await this.productRepository.findByName(data.name);
-
-        // console.log(poductNameAlredyExists[0].name)
 
         if(poductNameAlredyExists[0]?.name){
             throw new Error('Produto já existe na sua lista')

@@ -1,4 +1,6 @@
-import * as Prisma  from "../../repositories/implementations/PrismaProductRepository";
+// import * as Prisma  from "../../repositories/implementations/PrismaProductRepository";
+import * as Prisma  from "../../repositories/CreateProduct/implementations/PrismaProductRepositoryCreate";
+
 import { CreateProductController } from "./CreateProductController";
 import { CreateProductUseCase } from "./CreateProductUseCase";
 
